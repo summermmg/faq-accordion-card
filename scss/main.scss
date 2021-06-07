@@ -1,0 +1,28 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+@import "utility";
+@import "card";
+
+
+
+// Global style
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    background: linear-gradient(180deg, $soft-violet, $soft-blue);
+}
+
+ul {
+    list-style: none;
+}

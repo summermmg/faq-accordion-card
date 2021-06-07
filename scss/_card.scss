@@ -1,0 +1,133 @@
+// Variables
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 50%);
+$light-grayish-blue: hsl(240, 5%, 91%);
+
+// section
+.faq {
+    margin: 140px 20px 50px;
+    .faq_container {
+        background: white;
+        border-radius: 2rem;
+
+        .faq_wrapper {
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background: url('../images/bg-pattern-mobile.svg');
+                background-repeat: no-repeat;
+                background-position: top center;
+                top: 0;
+                left: 0;                
+            }
+
+
+            .faq_image {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: url('../images/illustration-woman-online-mobile.svg');
+                background-repeat: no-repeat;
+                background-position: top center;
+                top: -7rem;
+                left: -1rem;
+                .faq_desktop {
+                    display: none;
+                }
+            }
+            .faq_box-image {
+                display: none;
+            }
+            .faq_content {
+                z-index: 2;
+                margin-top: 6rem;
+                .faq_heading {
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1.3rem;
+                }
+                .faq_list {
+                    .faq_item {
+                        border-bottom: 1px solid $light-grayish-blue;
+                        padding: 1rem 0;
+                        .faq_input {
+                            display: none;
+                        }
+                        .faq_question {
+                            font-size: 14px;
+                            position: relative;
+                            &::after {
+                                content:url('../images/icon-arrow-down.svg');
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                            }
+                        }
+                        .faq_answer {
+                            display: none;
+                        }
+                        .faq_input:checked+label {
+                            & .faq_answer {
+                                display: block;
+                                padding: 1rem 2rem 0 0;
+                                line-height: 1.1rem;
+                                overflow: hidden;
+                            }
+                            & .faq_question {
+                                font-weight: 700;
+                                &::after {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// media query
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 780px) {
+
+}
+
+@media (min-width: 1024px) {
+    .faq_container {
+        max-width: 900px;
+        margin: 0 auto;
+        .faq_wrapper {
+            // overflow: hidden;
+            .faq_image {
+                position: relative;
+            }
+            .faq_content {
+                width: 40%;
+                margin-left: auto;
+                margin-right: 5rem;
+                margin-bottom: 2rem;
+                .faq_heading {
+                    justify-content: start;
+                }
+            }
+        }
+    }
+}
